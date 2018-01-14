@@ -1,0 +1,25 @@
+{
+  "name": "ts-study",
+  "version": "1.0.0",
+  "description": "学习typescript的一些心得",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config ./build/build.js --color"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tgxpuisb/TS-study.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tgxpuisb/TS-study/issues"
+  },
+  "homepage": "https://github.com/tgxpuisb/TS-study#readme",
+  "devDependencies": {
+    "glob": "^7.1.2",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
+  }
+}
