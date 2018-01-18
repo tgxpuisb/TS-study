@@ -68,9 +68,6 @@
 /* 1 */
 /***/ (function(module, exports) {
 
-var hello;
-hello = 'hello';
-console.log(hello);
 
 
 /***/ })
