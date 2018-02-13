@@ -60,75 +60,51 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 2:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports) {
 
-var p1 = {
-    x: 12,
-    y: 20
-};
-var _loop_1 = function (i) {
-    setTimeout(function () {
-        console.log(i);
-    }, i * 100);
-};
-for (var i = 0; i < 10; i++) {
-    _loop_1(i);
+var isDone = true;
+var dec = 5;
+var hex = 0xf00;
+var str = 'hehe';
+var theName = "a " + str;
+var list = [1, 2, 3];
+var list1 = [1, 2, 3];
+var x = ['s', 1];
+x[2] = 1;
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 1] = "Green";
+    Color[Color["Blue"] = 2] = "Blue";
+})(Color || (Color = {}));
+var c = Color.Green;
+var Color2;
+(function (Color2) {
+    Color2[Color2["Red"] = 1] = "Red";
+    Color2[Color2["Green"] = 2] = "Green";
+    Color2[Color2["Blue"] = 4] = "Blue";
+})(Color2 || (Color2 = {}));
+var c1 = Color.Green;
+var notSure = 4;
+notSure = '4';
+var l = [1, 's', '3'];
+function someF1() {
+    alert('hehe');
 }
-function printLabel(labelledObj) {
-    console.log(labelledObj.label);
+var test = undefined;
+function loop() {
+    while (true) {
+    }
 }
-var myObj = {
-    size: 10,
-    label: 'test string'
-};
-printLabel(myObj);
-function createSquare(config) {
-    var newSquare = {
-        color: 'White',
-        area: 100
-    };
-    if (config.color) {
-        newSquare.color = config.color;
-    }
-    if (config.width) {
-        newSquare.area = config.width * config.width;
-    }
-    return newSquare;
-}
-createSquare();
-var SquareConfig2Obj = {
-    a: 1
-};
-var search;
-search = function (num, source) {
-    return true;
-};
-var myAry = ['s', '2'];
-var myStr = myAry[1];
-var hehe = (function () {
-    function hehe() {
-    }
-    return hehe;
-}());
-function createClock(ctor, hour, min) {
-    return new ctor(hour, min);
-}
-var DigitalClock = (function () {
-    function DigitalClock(h) {
-    }
-    DigitalClock.prototype.tick = function () {
-        console.log("beep beep");
-    };
-    return DigitalClock;
-}());
+var someValue = 'this is str';
+var strLen = someValue.length;
+var strlen = someValue.length;
 
 
 /***/ })
-
-/******/ });
+/******/ ]);

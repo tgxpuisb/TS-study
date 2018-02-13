@@ -60,73 +60,34 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 2:
+/***/ 3:
 /***/ (function(module, exports) {
 
-var p1 = {
-    x: 12,
-    y: 20
-};
-var _loop_1 = function (i) {
-    setTimeout(function () {
-        console.log(i);
-    }, i * 100);
-};
-for (var i = 0; i < 10; i++) {
-    _loop_1(i);
+function someF(num, matrix) {
 }
-function printLabel(labelledObj) {
-    console.log(labelledObj.label);
+function foo(_a) {
+    var first = _a[0], last = _a.slice(1);
 }
-var myObj = {
-    size: 10,
-    label: 'test string'
+var o = {
+    a: "foo",
+    b: 12,
+    c: "bar"
 };
-printLabel(myObj);
-function createSquare(config) {
-    var newSquare = {
-        color: 'White',
-        area: 100
-    };
-    if (config.color) {
-        newSquare.color = config.color;
-    }
-    if (config.width) {
-        newSquare.area = config.width * config.width;
-    }
-    return newSquare;
+var a = o.a, b = o.b;
+function cc(_a) {
+    var a = _a.a, b = _a.b;
 }
-createSquare();
-var SquareConfig2Obj = {
-    a: 1
-};
-var search;
-search = function (num, source) {
-    return true;
-};
-var myAry = ['s', '2'];
-var myStr = myAry[1];
-var hehe = (function () {
-    function hehe() {
-    }
-    return hehe;
-}());
-function createClock(ctor, hour, min) {
-    return new ctor(hour, min);
+function cc1(_a) {
+    var a = _a.a, b = _a.b;
 }
-var DigitalClock = (function () {
-    function DigitalClock(h) {
-    }
-    DigitalClock.prototype.tick = function () {
-        console.log("beep beep");
-    };
-    return DigitalClock;
-}());
+function cc2(_a) {
+    var a = _a.a, _b = _a.b, b = _b === void 0 ? 1 : _b;
+}
 
 
 /***/ })
