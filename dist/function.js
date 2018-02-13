@@ -60,103 +60,38 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 5:
+/***/ 2:
 /***/ (function(module, exports) {
 
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var p1 = {
-    x: 12,
-    y: 20
-};
-var _loop_1 = function (i) {
-    setTimeout(function () {
-        console.log(i);
-    }, i * 100);
-};
-for (var i = 0; i < 10; i++) {
-    _loop_1(i);
+function add(x, y) {
+    return x + y;
 }
-function printLabel(labelledObj) {
-    console.log(labelledObj.label);
-}
-var myObj = {
-    size: 10,
-    label: 'test string'
+var myAdd = function (x, y) {
+    return x + y;
 };
-printLabel(myObj);
-function createSquare(config) {
-    var newSquare = {
-        color: 'White',
-        area: 100
-    };
-    if (config.color) {
-        newSquare.color = config.color;
-    }
-    if (config.width) {
-        newSquare.area = config.width * config.width;
-    }
-    return newSquare;
-}
-createSquare();
-var SquareConfig2Obj = {
-    a: 1
+var myAdd2 = function (x, y) {
+    return x + y;
 };
-var search;
-search = function (num, source) {
-    return true;
-};
-var myAry = ['s', '2'];
-var myStr = myAry[1];
-var hehe = (function () {
-    function hehe() {
-    }
-    return hehe;
-}());
-function createClock(ctor, hour, min) {
-    return new ctor(hour, min);
+function buildName(firstName, lastName) {
+    return firstName + ' ' + lastName;
 }
-var DigitalClock = (function () {
-    function DigitalClock(h, m) {
+function buildName1(firstName, lastName) {
+    if (lastName) {
+        return firstName + ' ' + lastName;
     }
-    DigitalClock.prototype.tick = function () {
-        console.log("beep beep");
-    };
-    return DigitalClock;
-}());
-var digital = createClock(DigitalClock, 12, 17);
-var square = {};
-square.color = 'blue';
-square.sideLength = 10;
-var $ = function (start) { };
-$.interval = 123;
-$.reset = function () { };
-var Control = (function () {
-    function Control() {
+    else {
+        return firstName;
     }
-    return Control;
-}());
-var Button = (function (_super) {
-    __extends(Button, _super);
-    function Button() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Button.prototype.select = function () { };
-    return Button;
-}(Control));
+}
+function buildName2(firstName, lastName) {
+    if (lastName === void 0) { lastName = 'sims'; }
+    return firstName + ' ' + lastName;
+}
 
 
 /***/ })

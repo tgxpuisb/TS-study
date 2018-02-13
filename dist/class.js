@@ -60,12 +60,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 5:
+/******/ ([
+/* 0 */,
+/* 1 */
 /***/ (function(module, exports) {
 
 var __extends = (this && this.__extends) || (function () {
@@ -78,87 +78,107 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var p1 = {
-    x: 12,
-    y: 20
-};
-var _loop_1 = function (i) {
-    setTimeout(function () {
-        console.log(i);
-    }, i * 100);
-};
-for (var i = 0; i < 10; i++) {
-    _loop_1(i);
-}
-function printLabel(labelledObj) {
-    console.log(labelledObj.label);
-}
-var myObj = {
-    size: 10,
-    label: 'test string'
-};
-printLabel(myObj);
-function createSquare(config) {
-    var newSquare = {
-        color: 'White',
-        area: 100
+var Greeter = (function () {
+    function Greeter(message) {
+        this.greeting = message;
+    }
+    Greeter.prototype.greet = function () {
+        return "Hello " + this.greeting;
     };
-    if (config.color) {
-        newSquare.color = config.color;
-    }
-    if (config.width) {
-        newSquare.area = config.width * config.width;
-    }
-    return newSquare;
-}
-createSquare();
-var SquareConfig2Obj = {
-    a: 1
-};
-var search;
-search = function (num, source) {
-    return true;
-};
-var myAry = ['s', '2'];
-var myStr = myAry[1];
-var hehe = (function () {
-    function hehe() {
-    }
-    return hehe;
+    return Greeter;
 }());
-function createClock(ctor, hour, min) {
-    return new ctor(hour, min);
-}
-var DigitalClock = (function () {
-    function DigitalClock(h, m) {
+var Animal = (function () {
+    function Animal() {
     }
-    DigitalClock.prototype.tick = function () {
-        console.log("beep beep");
+    Animal.prototype.move = function (distacen) {
+        if (distacen === void 0) { distacen = 0; }
     };
-    return DigitalClock;
+    return Animal;
 }());
-var digital = createClock(DigitalClock, 12, 17);
-var square = {};
-square.color = 'blue';
-square.sideLength = 10;
-var $ = function (start) { };
-$.interval = 123;
-$.reset = function () { };
-var Control = (function () {
-    function Control() {
+var Dog = (function (_super) {
+    __extends(Dog, _super);
+    function Dog() {
+        return _super.call(this) || this;
     }
-    return Control;
+    Dog.prototype.bark = function () {
+        console.log('Woof');
+    };
+    return Dog;
+}(Animal));
+var dog = new Dog();
+var Animal2 = (function () {
+    function Animal2(theName) {
+        this.name = theName;
+    }
+    return Animal2;
 }());
-var Button = (function (_super) {
-    __extends(Button, _super);
-    function Button() {
+var Dog2 = (function (_super) {
+    __extends(Dog2, _super);
+    function Dog2(theName) {
+        var _this = _super.call(this, theName) || this;
+        console.log(_this._pro);
+        return _this;
+    }
+    return Dog2;
+}(Animal2));
+var passcode = "secret passcode";
+var Employee = (function () {
+    function Employee() {
+    }
+    Object.defineProperty(Employee.prototype, "fullName", {
+        get: function () {
+            return this._fullName;
+        },
+        set: function (newName) {
+            if (passcode && passcode == "secret passcode") {
+                this._fullName = newName;
+            }
+            else {
+                console.log("Error: Unauthorized update of employee!");
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Employee;
+}());
+var employee = new Employee();
+employee.fullName = "Bob Smith";
+if (employee.fullName) {
+    alert(employee.fullName);
+}
+var Grid = (function () {
+    function Grid() {
+    }
+    Grid.origin = { x: 0, y: 0 };
+    return Grid;
+}());
+var Animal3 = (function () {
+    function Animal3() {
+    }
+    Animal3.prototype.move = function () {
+    };
+    return Animal3;
+}());
+var Dog3 = (function () {
+    function Dog3() {
+    }
+    Dog3.prototype.makeSound = function () {
+    };
+    Dog3.prototype.move = function () {
+    };
+    return Dog3;
+}());
+var Cat = (function (_super) {
+    __extends(Cat, _super);
+    function Cat() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Button.prototype.select = function () { };
-    return Button;
-}(Control));
+    Cat.prototype.makeSound = function () {
+    };
+    return Cat;
+}(Animal3));
 
 
 /***/ })
-
-/******/ });
+/******/ ]);

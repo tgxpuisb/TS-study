@@ -5,6 +5,7 @@
         "removeComments": true,
         "preserveConstEnums": true,
         "sourceMap": false,
-        "allowJs": false
+        "allowJs": false,
+        "target": "es5"
     }
 }
