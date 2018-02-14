@@ -36,3 +36,6 @@ function cc1({a, b}: {a: '', b: 1}): void {
 function cc2({a, b = 1}: C): void {
 
 }
+
+// 解构会使TS的写法变得复杂,小心使用
+
