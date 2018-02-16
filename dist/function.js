@@ -60,12 +60,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 2:
+/***/ 5:
 /***/ (function(module, exports) {
 
 function add(x, y) {
@@ -91,6 +91,25 @@ function buildName1(firstName, lastName) {
 function buildName2(firstName, lastName) {
     if (lastName === void 0) { lastName = 'sims'; }
     return firstName + ' ' + lastName;
+}
+function buildName3(firstName) {
+    var restOfName = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        restOfName[_i - 1] = arguments[_i];
+    }
+    return firstName + ' ' + restOfName.join(' ');
+}
+var buildNameFun = buildName3;
+var suits = ['hearts', 'spades', 'clubs', 'diamonds'];
+function pickCard(x) {
+    if (typeof x == "object") {
+        var pickedCard = Math.floor(Math.random() * x.length);
+        return pickedCard;
+    }
+    else if (typeof x == "number") {
+        var pickedSuit = Math.floor(x / 13);
+        return { suit: suits[pickedSuit], card: x % 13 };
+    }
 }
 
 

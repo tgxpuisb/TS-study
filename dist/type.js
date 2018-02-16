@@ -60,40 +60,30 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 6:
+/***/ 15:
 /***/ (function(module, exports) {
 
-function identity(arg) {
-    return arg;
-}
-var output = identity('myString');
-var output1 = identity('str');
-function logging(arg) {
-    console.log(arg.length);
-    return arg;
-}
-function identity2(arg) {
-    return arg;
-}
-var myIdentity = identity2;
-myIdentity(2);
-var GenericNumber = (function () {
-    function GenericNumber() {
+window.onmousedown = function (mouseEvent) {
+    console.log(mouseEvent.button);
+};
+function extend(first, second) {
+    var result = {};
+    for (var id in first) {
+        result[id] = first[id];
     }
-    return GenericNumber;
-}());
-var ins = new GenericNumber();
-function log(arg) {
-    console.log(arg.length);
-    return arg;
+    for (var id in second) {
+        if (!result.hasOwnProperty(id)) {
+            result[id] = second[id];
+        }
+    }
+    return result;
 }
-function create(c) {
-    return new c();
+function padLeft(value, padding) {
 }
 
 

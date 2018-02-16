@@ -60,23 +60,30 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */
+/******/ ({
+
+/***/ 4:
 /***/ (function(module, exports) {
 
-var Direction;
-(function (Direction) {
-    Direction[Direction["UP"] = 1] = "UP";
-    Direction[Direction["DOWN"] = 2] = "DOWN";
-    Direction[Direction["LEFT"] = 3] = "LEFT";
-    Direction[Direction["RIGHT"] = 4] = "RIGHT";
-    Direction[Direction["V"] = 2] = "V";
-})(Direction || (Direction = {}));
+var Dir;
+(function (Dir) {
+    Dir[Dir["UP"] = 1] = "UP";
+    Dir[Dir["DOWN"] = 2] = "DOWN";
+    Dir[Dir["LEFT"] = 3] = "LEFT";
+    Dir[Dir["RIGHT"] = 4] = "RIGHT";
+})(Dir || (Dir = {}));
+var FILE_ACCESS;
+(function (FILE_ACCESS) {
+    FILE_ACCESS[FILE_ACCESS["NONE"] = 0] = "NONE";
+    FILE_ACCESS[FILE_ACCESS["READ"] = 2] = "READ";
+    FILE_ACCESS[FILE_ACCESS["WRITE"] = 4] = "WRITE";
+    FILE_ACCESS[FILE_ACCESS["READ_WRITE"] = 6] = "READ_WRITE";
+})(FILE_ACCESS || (FILE_ACCESS = {}));
 
 
 /***/ })
-/******/ ]);
+
+/******/ });

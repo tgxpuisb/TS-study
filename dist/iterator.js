@@ -60,40 +60,18 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 6:
+/***/ 9:
 /***/ (function(module, exports) {
 
-function identity(arg) {
-    return arg;
-}
-var output = identity('myString');
-var output1 = identity('str');
-function logging(arg) {
-    console.log(arg.length);
-    return arg;
-}
-function identity2(arg) {
-    return arg;
-}
-var myIdentity = identity2;
-myIdentity(2);
-var GenericNumber = (function () {
-    function GenericNumber() {
-    }
-    return GenericNumber;
-}());
-var ins = new GenericNumber();
-function log(arg) {
-    console.log(arg.length);
-    return arg;
-}
-function create(c) {
-    return new c();
+var someArray = [1, "string", false];
+for (var _i = 0, someArray_1 = someArray; _i < someArray_1.length; _i++) {
+    var entry = someArray_1[_i];
+    console.log(entry);
 }
 
 
